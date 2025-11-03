@@ -11,7 +11,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-    const res = await fetch("http://localhost:8000/api/auth/register", {
+    const res = await fetch("http://asha-7qio.vercel.app/api/auth/register", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ username, email, password }),

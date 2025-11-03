@@ -23,7 +23,7 @@ const Upload = () => {
     formdata.append("report", file);
     formdata.append("phone", phone);
     try {
-      const res = await fetch("http://localhost:8000/api/upload", {
+      const res = await fetch("http://asha-7qio.vercel.app/api/upload", {
         method: "POST",
         body: formdata,
       });
