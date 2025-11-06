@@ -65,7 +65,7 @@ const Upload = () => {
     <div className="min-h-screen bg-gradient-to-br from-[#e0f4f9] via-[#d4eef5] to-[#c8e8f1]">
       
       
-      {/* Animated background elements */}
+      
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-20 w-72 h-72 bg-[#67C6E3] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
         <div className="absolute top-40 right-20 w-72 h-72 bg-[#4FB3D9] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
@@ -73,7 +73,7 @@ const Upload = () => {
       </div>
 
       <div className="relative max-w-4xl mx-auto p-6 space-y-6">
-        {/* Header */}
+       
         <div className="text-center py-8">
           <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#1a5f7a] via-[#67C6E3] to-[#1a5f7a]">
             Medical Report Analysis
@@ -83,7 +83,7 @@ const Upload = () => {
           </p>
         </div>
 
-        {/* Upload Card */}
+        
         <div className="bg-white/60 backdrop-blur-2xl rounded-3xl shadow-2xl p-8 border border-white/50 transform transition-all duration-500 hover:shadow-[0_20px_80px_rgba(103,198,227,0.3)]">
           <div className="mb-6">
             <h2 className="text-2xl font-bold text-gray-800 mb-2">Upload Medical Report</h2>
@@ -115,12 +115,12 @@ const Upload = () => {
               disabled={!file || loading}
               className="relative w-full py-4 px-6 overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {/* Button background layers for 3D effect */}
+              
               <div className="absolute inset-0 bg-gradient-to-br from-[#67C6E3] to-[#4FB3D9] rounded-2xl transform transition-transform duration-200 group-hover:scale-[0.98] group-active:scale-95"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-[#5BB8D8] to-[#378BA4] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),inset_0_-1px_1px_rgba(0,0,0,0.2)] rounded-2xl"></div>
               
-              {/* Shine effect on hover */}
+              
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
               </div>
@@ -133,7 +133,7 @@ const Upload = () => {
           </form>
         </div>
 
-        {/* Loading State */}
+        
         {loading && (
           <div className="bg-white/60 backdrop-blur-2xl rounded-3xl shadow-xl p-8 text-center border border-white/50">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#67C6E3] to-[#5BB8D8] rounded-2xl animate-pulse mb-4 shadow-lg">
@@ -144,7 +144,7 @@ const Upload = () => {
           </div>
         )}
 
-        {/* Results Card */}
+       
         {!loading && (englishSummary || hindiSummary) && (
           <div className="bg-white/60 backdrop-blur-2xl rounded-3xl shadow-2xl p-8 border border-white/50">
             <div className="mb-6">
@@ -153,7 +153,7 @@ const Upload = () => {
               <p className="text-gray-600">Your medical report has been analyzed. Choose your preferred language below.</p>
             </div>
             
-            {/* Language Toggle */}
+            
             <div className="flex gap-3 mb-6">
               <button
                 onClick={() => setLanguage("English")}
@@ -191,7 +191,7 @@ const Upload = () => {
                 📤 Share Medications</button>
             </div>
 
-            {/* English Summary */}
+            
             {language === "English" && englishSummary && (
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
@@ -206,7 +206,7 @@ const Upload = () => {
               </div>
             )}
 
-            {/* Hindi Summary */}
+         
             {language === "Hindi" && hindiSummary && (
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
@@ -224,7 +224,7 @@ const Upload = () => {
         )}
       </div>
 
-      {/* Custom animations */}
+      
       <style jsx>{`
         @keyframes blob {
           0%, 100% { transform: translate(0, 0) scale(1); }

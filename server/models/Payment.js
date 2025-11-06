@@ -6,6 +6,6 @@ const PaymentScehma = new mongoose.Schema({
   credits: { type: Number, required: true },
   payment: { type: Number, required: true },
   date: { type: Date, default: Date.now },
-  status: { type: String, default: "Pending" }
+  status: { type: String, enum:["pending","approved","cleared"], default: "pending" }
 })
 module.exports = mongoose.model("Payment",PaymentScehma)
